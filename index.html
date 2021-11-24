@@ -10,32 +10,43 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;400&family=Josefin+Sans&family=Judson&display=swap" rel="stylesheet">
     <title>Julia Reel</title>
-    <link rel="shortcut icon" type="image/jpg" href="images/favicon.jpg"/>
+    <link rel="shortcut icon" type="image/jpg" href="images/favicon.png"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
 </head>
 <body>
+    <div class="skip"><a href="#main">Skip to Main Content</a></div>
     <header>
-        <nav>
-            <ul class="nav">
-                <li><a class="current" href="index.html">HOME</a></li>
-                <li><a href="My Projects.html">PROJECTS</a></li>
-                <li><a href="Gallery.html">INTERESTS</a></li>
-                <li><a href="Contact.html">CONTACT</a></li>
-            </ul>
-        </nav>
-        
+        <div class="mainMenu">
+            <div class="logo">
+                <a href=index.html>Julia Reel</a>
+            </div>
+            <nav>
+                <ul class="nav">
+                    <li><a class="current" href="index.html">HOME</a></li>
+                    <li><a href="myProjects.html">PROJECTS</a></li>
+                    <li><a href="gallery.html">INTERESTS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
+    <main id="main">
         <header class="main">
-
-            <h1>Hi, I'm</h1>
-            <h2>JULIA REEL</h2>
-            <h3>Student Studying Information Analysis</h3>
-            <img src="images/myheadshot.jpeg" alt="Headshot">
-            <a id="Projects" href='My Projects.html'><button>My Projects</button></a>
-            <div id="spacer"></div>
+            <div class="mainText">
+                <h1>Hi, I'm</h1>
+                <h2>JULIA REEL</h2>
+                <h3>Student Studying Information Analysis</h3>
+            </div>
+            <div class="imgSection">
+                <img src="images/myheadshot.jpeg" alt="Headshot">
+            </div>
+            <div class="projectButton">
+                <a id="Projects" href='My Projects.html'><button>My Projects</button></a>
+            </div>
+            
+            
 
         </header>
         
@@ -57,25 +68,60 @@
                     Python, C++, HTML/CSS, and R.
                 </p>
             </div>
-    
         </div>
+
+        <div class="line">
+        </div>
+
+        <div class="Education">
+            <h1>EDUCATION</h1>
+            <div id="handPara">
+                <p>I grew up in Madison, Connecticut where I attended Daniel Hand High School.
+                    I graduated in June, 2019 with an unweighted GPA of 3.9/4.0.
+                    Throughout my time in high school, I was very involved in my community and 
+                    spent my afternoons tutoring young students in nearby New Haven, CT. I also
+                    co-directed and individually led local blood drives with the American Red Cross, 
+                    organizing drives both within DHHS and off campus.
+                </p>
+            </div>
+            <div id="handImg">
+                <img src="images/Hand.jpg" alt="DHHS">
+            </div>
+            <div id="umichPara">
+                <p> In September, 2019, I began my studies in Ann Arbor at the University of Michigan.
+                    Earlier this year, in 2021, I was admitted to the university's upper-level program within
+                    the School of Information where I currently study Information Analysis. I expect to 
+                    graduate with my Bachelor of Science in 2023. Outside of the classroom, I am involved in 
+                    Dance Marathon at UM, and I am a member of our campus's Girls who Code club. I am also a very 
+                    involved member with my sorority on campus, Delta Delta Delta.
+                </p>
+            </div>
+            <div id="umichImg">
+                <img src="images/umich.jpeg" alt="UMICH">
+            </div>
+        </div>
+
     </main>
 
     <footer>
-        <h1>
-            About this Page
-        </h1>
-        <p>
-            This page was made as a final portfolio project for SI 339, taught by Dr. Van Lent, in the Fall of 2021.
-        </p>
-        <h2>
-            Connect with me! 
-        </h2>
-        <p>
-            <a class="center" href='https://www.linkedin.com/in/reelj'><button>LinkedIn Profile</button></a>
-        </p>
-        <p>
-          &copy; Julia Reel 2021</p>
+        <div class="row">
+            <div class="about">
+                <h1>About This Page</h1>
+                    <p id=firstP>
+                        This page was made as a final portfolio project for SI 339, 
+                        taught by Dr. Van Lent, in the Fall of 2021.
+                    </p>
+                    <p id=thirdP>
+                        &copy; Julia Reel 2021</p>
+            </div>
+            <div class="connect">
+                <h1>
+                    Connect With Me
+                </h1>
+                <p id=secondP>
+                    <a class="center" href='https://www.linkedin.com/in/reelj'><button>LinkedIn Profile</button></a>
+                </p>
+        </div>
       </footer>
 </body>
 </html>

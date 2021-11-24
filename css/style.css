@@ -26,11 +26,17 @@ body{
 }
 
 .main {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     background-color:white;
+    justify-items: center;
+    padding-bottom: 20px
+}
+.mainText{
+    text-align:center;
 }
 
 .main h1 {
@@ -51,6 +57,9 @@ body{
     font-size: 13px;
 }
 
+p { 
+    color: #0c2f42;
+}
 
 ul {
     background-color: #f2f2f2;
@@ -66,12 +75,12 @@ a:visited {
     color: black;
 }
 
-.About {
+.About, .Education {
     background-color: #f2f2f2;
     padding: 25px;
 }
 
-.About h1 {
+.About h1, .Education h1 {
     padding-right: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -99,9 +108,10 @@ a {
 }
 
 
-#aboutPara p {
+.About p{
     margin-bottom: 30px;
 }
+
 
 .gallery {
     display: grid;
@@ -118,7 +128,7 @@ a {
 }
 
 footer{
-    background-color: black;
+    background-color: rgb(7, 32, 46);
     color: white;
     padding: 10px;
     text-align: center;
@@ -152,7 +162,7 @@ footer p {
   
   /* Style the submit button with a specific background color etc */
   input[type=submit] {
-    background-color: #04AA6D;
+    background-color: #0446aa;
     color: white;
     padding: 12px 20px;
     border: none;
@@ -162,7 +172,7 @@ footer p {
   
   /* When moving the mouse over the submit button, add a darker green color */
   input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: #010358;
   }
   
   /* Add a background color and some padding around the form */
@@ -178,6 +188,8 @@ footer p {
     font-family: 'Judson', serif;
     text-align: center;
     padding: 20px;
+    background-color: rgb(5 99 151 / 75%);
+    color: white;
 }
 
 .cooking h1 {
@@ -204,7 +216,7 @@ footer p {
 }
 
 .dogs {
-    background-color: white;
+    background-color: #f2f2f2;;
     padding: 25px;
 }
 
@@ -231,13 +243,17 @@ footer p {
     font-family: 'Judson', serif;
     text-align: center;
     padding: 20px;
+    background-color: rgb(5 99 151 / 75%);
+    color: white;
 }
 
 #projects > header > h1{
     font-size: 25px;
-    font-family: 'Judson', serif;        
+    font-family: 'Judson', serif;
     text-align: center;
     padding: 20px;
+    background-color: rgb(5 99 151 / 75%);
+    color: white;
 }
 
 #projects h1 {
@@ -262,7 +278,142 @@ footer p {
   .nav .current {
       color: rgb(27, 92, 128);
       font-weight: bolder;
+      text-decoration: underline;
+      text-underline-offset: 0.5em;
   }
+
+.logo{
+    display: none;
+}
+footer h1{
+    font-weight: 900;
+}
+footer p{
+    color: #aba8a8;
+}
+.row {
+    padding: 10px 40px 10px 40px;
+}
+.line {
+    border: 0;
+    border-top: 0.01em solid rgb(12 112 167 / 42%);
+}
+
+.Education img{
+    width: 250px;
+    padding-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#handImg {
+    padding-bottom: 25px;
+}
+.Education p{
+    margin-bottom: 20px;
+}
+
+
+@media screen and (min-width: 768px){
+    .mainMenu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: #f2f2f2;
+        align-items: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        box-shadow: 0 0 20px 12px rgb(0 0 0 / 14%);
+    }
+    .nav li{
+        margin-left: 30px;
+    }
+
+    .logo {
+        display: unset;
+        padding-left: 30px;
+        font-size: 24px;
+        font-weight: 990;
+    }
+    .main {
+        grid-template-columns: 1fr 1fr;
+    }
+    .main img {
+        width: 300px;
+        margin-left: -30px;
+    }
+    .mainText {
+        line-height: 30px;
+        text-align: left;
+    }
+    .About, .Education {
+        padding: 25px 100px 25px 100px;
+    }
+    .About h1, .Education h1{
+        font-size: 30px;
+        padding-bottom: 30px;
+    }
+    header.main{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    body > header {
+        position: sticky;
+        top: 0;
+    }
+    .projectButton {
+        margin-top: -180px;
+        margin-left: -120px;
+    }
+    
+    .row{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+        
+    }
+    footer .about {
+        grid-column: 1/2;
+        font-weight: normal;
+    }
+    footer .connect {
+        grid-column: 2/3;
+    }
+    
+    .center{
+        padding-top: 10px;
+    }
+
+    #interests h1 {
+        padding: 100px 20px 100px 20px;
+        font-size: 30px;
+    }
+
+    #projects > header > h1 {
+        padding: 100px 20px 100px 20px;
+        font-size: 30px;
+    }
+
+    .skip a{
+        background: white;
+        left: 0;
+        padding: 6px;
+        -webkit-transition: top 1s ease-out;
+        transition: top 1s ease-out;
+        z-index: 1;
+        position: absolute;
+        top: -40px;
+      }
+      
+      .skip a:focus {
+        top: 0;
+      }
+
+      #contact h1 {
+        padding: 100px 20px 100px 20px;
+        font-size: 30px;
+      }
+}
 
 @media screen and (min-width: 850px){
     .gallery {
